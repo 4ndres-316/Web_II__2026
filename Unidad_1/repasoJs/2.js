@@ -1,4 +1,5 @@
-var nombrecompleto="juan perez"
-let 
-const precio =3;
-console.log()
+const nombre = "Juan"
+const apellido = "Perez"
+let nombreCompleto = `Tu nombre completo es ${nombre} ${apellido}`
+
+console.log(nombreCompleto)
