@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EJERCICIO 10: uso de appendchild</title>
+  </head>
+  <body>
+    <div id="contenedor1">Contenedor inicial</div>
+    <button id="boton">Agregar Elemento</button>
+    <script>
+      const nuevoelemento = document.createElement("div"); //crear elementos html
+      nuevoelemento.textContent = "Elemento creado con DOOM";
+      const contenedor = document.getElementById("contenedor1");
+      contenedor.appendChild(nuevoelemento); //agrega nuevo hijo
+      console.log(contenedor1);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EJERCICIO 2: Seleccion de elementos llamado por clase</title>
+  </head>
+  <body>
+    <div class="clase1">elemento1</div>
+    <div class="clase1">elemento2</div>
+    <div class="clase1">elemento3</div>
+    <script>
+      const elementos = document.getElementsByClassName("clase1");
+      for (const elemento of elementos) {
+        elemento.textContent = "111";
+        elemento.style.backgroundColor = "red";
+      }
+    </script>
+  </body>
+</html>
