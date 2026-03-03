@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primaria: #000000;
+  --color-secundaria: #f6f6f6;
+  --color-terciaria: #22d5fd84;
+  --color-hover: #272727;
+
+  --fuente-krona: "Krona One", sans-serif;
+  --fuente-montserrat: "Montserrat", sans-serif;
+}
+
+.header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 25px;
+  padding: 20px 60px;
+}
+
+.header__menu {
+  display: flex;
+  gap: 50px;
+  justify-content: flex-end;
+}
+
+.header__menu__link {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #22d5fd84;
+}
+
+.header__menu__link:hover {
+  color: #f6f6f6;
+  font-size: 22px;
+}
+
+h1 {
+  color: #22d5fd84;
+}
+
+body {
+  background-color: #272727;
+  padding: 25px;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+section {
+  width: 60%;
+  padding: 40px;
+}
+
+.presentacion {
+  background-color: #000000;
+  color: #f6f6f6;
+}
+
+.presentacion__contenido__titulo {
+  margin-bottom: 30px;
+}
+
+.presentacion__enlaces {
+  margin-top: 30px;
+}
+
+.header__menu {
+  align-items: center;
+  content: normal;
+}
+
+.presentacion__enlaces__link {
+  color: #22d5fd84;
+  align-items: center;
+  width: 25px;
+  font-size: 20px;
+}
+
+.presentacion__enlaces__link:hover {
+  color: #f6f6f6;
+  font-size: larger;
+  font-size: 22px;
+}
+
+.presentacion__contenido__texto{
+    font-size: 18px;
+    padding: 8px 0;
+}
+
+.presentacion__imagen {
+  max-height: 450px;
+  height: auto;
+  box-shadow: 0 0 2rem rgb(246, 246, 246);
+  margin: 20px;
+  border-radius: 15%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.presentacion__imagen:hover{
+    max-height: 452px;
+}
+
+h2{
+    margin: 15px 0;
+}
+
+footer {
+  color: #22d5fd84;
+}
