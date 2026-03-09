@@ -7,9 +7,9 @@ const checkComplete = () => {
 
 const color = (evento) => {
   const element = evento.target;
-  element.classList.add("fas");
-  element.classList.add("completeIcon");
-  element.classList.remove("far");
+  element.classList.toggle("fas");
+  element.classList.toggle("far");
+  element.classList.toggle("completeIcon");
 };
 
 export default checkComplete;
