@@ -7,9 +7,13 @@ import deleteIcon from "./components/deleteIcon.js";
 
   const createTask = (evento) => {
     evento.preventDefault();
+    const regex = /^[a-zA-Z\s]+$/;
     const input = document.querySelector("[data-form-input]");
-    const value = input.value; //recupera valor de input
-    //llamamos por datas porque class es estilo
+    const value = input.value;
+    if (!regex.test(value)) {
+      alert("Ingresa solo letras, ERROR");
+      return;
+    }
     //creamos el objeto
     const list = document.querySelector("[data-list]");
     const task = document.createElement("li");
