@@ -1,0 +1,157 @@
+/*Header*/
+
+.headerPrincipal{
+    background-color: #333;
+}
+
+.headerPrincipal .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headerPrincipal-nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.headerPrincipal-nav-link{
+    border-radius: 6px;
+    padding: 10px 18px;
+    border: none;
+    background: #f6734a;
+    color: #333;
+    font-weight: bold;
+}
+
+.headerPrincipal-nav-link:hover{
+    background: #f6734a;
+    color: white;
+}
+
+/*Productos*/
+
+.contenidoPrincipal-productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.contenidoPrincipal-productos-link{
+    height: 100px;
+    background-color: #ffeea4;
+    margin: 1%;
+    box-shadow: 2px 2px 2px #CCC;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenidoPrincipal-productos-link a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.contenidoPrincipal-productos-link:hover{
+    transform: scale(1.05);
+    background: #f6734a;
+}
+
+/*Video*/
+
+.videoSobre .container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.videoSobre-button{
+    background: #f6734a;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/*Footer*/
+
+.rodapePrincipal-navMap-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.rodapePrincipal-navMap-link{
+    display: block;
+    text-decoration: none;
+    color: #ffeea4;
+    font-size: 14px;
+    padding: 6px 0;
+    transition: all 0.3s ease;
+}
+
+.rodapePrincipal-navMap-link:hover{
+    color: #f6734a;
+    transform: translateX(5px);
+}
+
+.rodapePrincipal-patrocinadores .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.rodapePrincipal-patrocinadores-list{
+    display: flex;
+    gap: 20px;
+}
+
+.rodapePrincipal-contatoForm-fieldset{
+    display: flex;
+}
+
+/*Tablet*/
+
+@media (min-width:768px){
+
+    .headerPrincipal .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .videoSobre .container{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .videoSobre-video{
+        flex: 1;
+    }
+
+    .videoSobre-sobre{
+        flex: 1;
+    }
+
+}
+
+/*Escritorio*/
+
+@media (min-width:1024px){
+
+    .contenidoPrincipal-productos{
+        justify-content: space-between;
+    }
+
+    .contenidoPrincipal-productos-link{
+        flex: 1 1 22%;
+    }
+
+    .rodapePrincipal-patrocinadores .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

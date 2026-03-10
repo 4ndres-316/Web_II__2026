@@ -1,0 +1,199 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+}
+
+/* Header */
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(8, 21, 22);
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.head__logo {
+  height: 60px;
+}
+
+.head__nav ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.head__link a {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.head__link a:hover{
+    color: black;
+}
+
+/* Sección principal */
+.pagina {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.pagina__boton {
+  border: 2px solid #812121;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  margin-top: 2rem;
+}
+
+.pagina__boton:hover {
+  background-color: #e21919;
+}
+
+/* Elemento */
+.elemento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 2rem;
+  background-color: rgb(8, 21, 22);
+}
+
+.elemento__figura {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.elemento__figura--imagen {
+  max-width: 400px;
+  width: 100%;
+}
+
+.elemento__boton {
+  margin-top: 1rem;
+  color: white;
+  border: 2px solid #e21919;
+  padding: 0.5rem 1rem;
+}
+
+.elemento__boton:hover {
+  background-color: #e21919;
+}
+
+/* Mensajes */
+.mensaje__lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+}
+
+.mensaje__item {
+  flex: 250px;
+  background-color: #f9f9f9;
+  padding: 8rem;
+  border-radius: 8px;
+}
+
+/* Nosotros */
+.nosotros {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+}
+
+.nosotros__conteiner {
+  flex: 1 1 300px;
+}
+
+.nosotros__imagen {
+  max-width: 300px;
+  border-radius: 50%;
+}
+
+/* Productos */
+.producto__card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: gray;
+}
+
+.card {
+  flex: 1 1 250px;
+  border: 1px solid #e21919;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  background-color: rgb(8, 21, 22);
+  color: white;
+}
+
+.card__boton {
+  margin-top: 1rem;
+  color: black;
+  border: 2px solid #e21919;
+  padding: 0.5rem 1rem;
+}
+
+.card__boton:hover{
+    background-color: #e21919;
+}
+
+/* Contacto */
+.contacto {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  background-color: gray;
+}
+
+.contacto__contenido {
+  flex: 1 1 300px;
+}
+
+.contacto img {
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(8, 21, 22);
+  color: white;
+  padding: 2rem;
+}
+
+.footer__nav ul {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer__link:hover{
+    color: black;
+}
