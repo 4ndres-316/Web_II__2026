@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Dosis", sans-serif;
+  font-size: 16px;
+}
+
+main {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #106901;
+  background-position: center;
+  background-image: url("https://imagenes.hobbyconsolas.com/files/image_1920_1080/uploads/imagenes/2024/08/13/6903ccd5cb6c1.jpeg");
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.container {
+  width: 750px;
+  margin: 40px auto;
+  background: #3b7132;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px);
+}
+
+header h1 {
+  text-align: center;
+  color: #1a1a1a;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.formContainer {
+  margin-bottom: 30px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.formulario {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f5f7fa;
+}
+
+.formulario:focus {
+  border-color: #683171;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+.btnSubir {
+  grid-column: span 2;
+  padding: 14px;
+  background: linear-gradient(135deg, #71315a, #483171);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btnSubir:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.tablaContainer {
+  margin-top: 20px;
+}
+
+.tablaContainer h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  table-layout: fixed;
+}
+
+td, th {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+thead {
+  background: linear-gradient(135deg, #683171, #2980b9);
+  color: #fff;
+}
+
+thead th {
+  padding: 14px;
+  text-align: center;
+}
+
+tbody td {
+  padding: 12px;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+tbody tr:nth-child(even) {
+  background: #f4f6f8;
+}
+
+tbody tr:hover {
+  background: #dff0ff;
+  cursor: pointer;
+}
+
+button.delete {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  margin: 2px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button.delete:hover {
+  background: #c0392b;
+}
+
+button.edit {
+  background: #f39c12;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  margin: 2px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button.edit:hover {
+  background: #d68910;
+}
