@@ -8,7 +8,7 @@
 main {
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: #106901;
+  background-color: #26ff00;
   background-position: center;
   background-image: url("https://imagenes.hobbyconsolas.com/files/image_1920_1080/uploads/imagenes/2024/08/13/6903ccd5cb6c1.jpeg");
   min-height: 100vh;
@@ -22,14 +22,14 @@ main {
 .container {
   width: 750px;
   margin: 40px auto;
-  background: #3b7132;
+  background: #26ff00;
   padding: 30px;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(5px);
 }
 
-header h1 {
+h1 {
   text-align: center;
   color: #1a1a1a;
   font-size: 28px;
@@ -54,14 +54,14 @@ form {
 }
 
 .formulario:focus {
-  border-color: #683171;
-  box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+  border-color: #dd00ff;
+  box-shadow: 0 0 8px rgba(0, 153, 255, 0.5);
 }
 
 .btnSubir {
   grid-column: span 2;
   padding: 14px;
-  background: linear-gradient(135deg, #71315a, #483171);
+  background: linear-gradient(135deg, #ff00a2, #5d00ff);
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -101,7 +101,7 @@ td, th {
 }
 
 thead {
-  background: linear-gradient(135deg, #683171, #2980b9);
+  background: linear-gradient(135deg, #dd00ff, #0099ff);
   color: #fff;
 }
 
@@ -126,7 +126,7 @@ tbody tr:hover {
 }
 
 button.delete {
-  background: #e74c3c;
+  background: #ff1900;
   color: white;
   border: none;
   padding: 6px 10px;
@@ -136,11 +136,11 @@ button.delete {
 }
 
 button.delete:hover {
-  background: #c0392b;
+  background: #ff1900;
 }
 
 button.edit {
-  background: #f39c12;
+  background: #ff9d00;
   color: white;
   border: none;
   padding: 6px 10px;
@@ -150,5 +150,5 @@ button.edit {
 }
 
 button.edit:hover {
-  background: #d68910;
+  background: #ff9d00;
 }

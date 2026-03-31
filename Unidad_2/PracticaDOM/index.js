@@ -92,4 +92,18 @@ const tabla = (() => {
   form.setDatos((task) => {
     tabla.addTask(task);
   });
+
+  const elementos = document.querySelectorAll(".formulario");
+  elementos.forEach((card) => {
+    let zoomInterval;
+    let scale = 1;
+
+    card.addEventListener("mouseenter", () => {
+      zoomInterval = setInterval(() => {
+        scale += 0.1;
+        card.style.transform = `scale(${scale})`;
+        card.style.transition = "transform 0.05s linear";
+      }, 50);
+    });
+  });
 })();
