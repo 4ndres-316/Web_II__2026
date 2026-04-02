@@ -8,9 +8,22 @@
     },
     {
       "id": "1",
-      "titulo": "Nuevo Post Creado",
-      "descripcion": "CONTENIDO",
-      "fecha": "2025-03-27"
+      "titulo": "mdiana",
+      "descripcion": "adas",
+      "fecha": "2027-03-08"
+    },
+    {
+      "id": "N9ixC8wy1-k",
+      "titulo": "Camilo",
+      "descripcion": "Virtdey",
+      "fecha": "2029-06-30"
+    },
+    {
+      "id": "9aYWj5-KSVg",
+      "titulo": "frey",
+      "descripcion": "freyfrey",
+      "fecha": "2034-05-08"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
