@@ -13,7 +13,7 @@ const cards = (() => {
 
       card.innerHTML = `
         <p><strong>Nombre:</strong>${task.task}</p>
-        <p><strong>Descripción:</strong>${task.description}</p>
+        <p><strong>Descripción:</strong>${task.descrpiption}</p>
         <p><strong>Fecha:</strong>${task.date}</p>
         <p><strong>Prioridad:</strong>${task.priority}</p>
         <p><strong>Nota:</strong>${task.note}</p>

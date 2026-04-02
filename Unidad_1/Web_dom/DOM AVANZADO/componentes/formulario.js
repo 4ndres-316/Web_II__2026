@@ -11,7 +11,7 @@ const form = (() => {
   const datosForm = () => {
     return {
       task: inputTask.value.trim(),
-      description: inputDescription.value.trim(),
+      descrpiption: inputDescription.value.trim(),
       date: inputFecha.value.trim(),
       priority: inputPrioridad.value.trim(),
       note: inputNota.value.trim(),
