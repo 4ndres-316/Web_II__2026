@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Doguito Petshop | Error</title>
+    <title>Doguito Petshop | Actualizar producto</title>
 
     <link rel="icon" href="../assets/img/doguitoadm.svg" />
 
@@ -18,18 +18,15 @@
 
     <link rel="stylesheet" href="../assets/css/base/base.css" />
     <link rel="stylesheet" href="../assets/css/componentes/header.css" />
-    <link rel="stylesheet" href="../assets/css/error_general.css" />
     <link rel="stylesheet" href="../assets/css/componentes/card.css" />
+    <link rel="stylesheet" href="../assets/css/register_client.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/inputs.css" />
     <link rel="stylesheet" href="../assets/css/componentes/button.css" />
   </head>
 
   <body>
     <header class="header container">
-      <img
-        src="../assets/img/doguitoadm.svg"
-        alt="Logotipo Doguito"
-        class="header__logo"
-      />
+      <img src="../assets/img/doguitoadm.svg" class="header__logo" />
 
       <nav>
         <ul class="header__list-nav">
@@ -45,16 +42,31 @@
       </nav>
     </header>
 
-    <main class="container flex flex--column flex--center">
-      <section class="register-card card">
-        <span class="register-card__icon-complete"></span>
+    <main class="container flex flex--center flex--column">
+      <section class="card cadastro">
+        <h1 class="card__title">Editar producto</h1>
 
-        <h1 class="register-card__title card__title">
-          Ops! Error al procesar el cliente 👤
-        </h1>
+        <form class="flex flex--column" data-form>
+          <div class="input-container">
+            <input class="input" type="text" required data-nombre />
+            <label class="input-label">Nombre</label>
+          </div>
 
-        <a href="./lista_cliente.html" class="button"> Volver a clientes </a>
+          <div class="input-container">
+            <input class="input" type="number" required data-precio />
+            <label class="input-label">Precio</label>
+          </div>
+
+          <div class="input-container">
+            <textarea class="input" required data-descripcion></textarea>
+            <label class="input-label">Descripción</label>
+          </div>
+
+          <button type="submit" class="button">Editar producto</button>
+        </form>
       </section>
     </main>
+
+    <script type="module" src="../controllers/actualizar_producto.js"></script>
   </body>
 </html>

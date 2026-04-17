@@ -69,14 +69,13 @@ const crearCliente = (nombre, email) => {
 };
 
 const actualizarCliente = (nombre, email, id) => {
-  //solo modifico el nombre y el email, el id se mantiene igual
   return fetch(`http://localhost:3000/perfil/${id}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ nombre, email })
-      .then((respuesta) => console.log(respuesta))
-      .catch((error) => console.log(error)),
-  });
+    body: JSON.stringify({ nombre, email }),
+  })
+    .then((respuesta) => respuesta.json())
+    .catch((error) => console.log(error));
 };
 
 const eliminarCliente = (id) => {
@@ -89,8 +88,8 @@ const eliminarCliente = (id) => {
 //referencia a id
 const cliente = (id) => {
   return fetch(`http://localhost:3000/perfil/${id}`).then((respuesta) =>
-    respuesta.json(),
-  );
+    respuesta.json())
+  .catch((error) => console.log("Error aquí",error));
 };
 
 export const clientService = {

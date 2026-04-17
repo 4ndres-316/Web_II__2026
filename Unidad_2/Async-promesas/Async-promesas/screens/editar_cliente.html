@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -30,11 +30,15 @@
       <nav>
         <ul class="header__list-nav">
           <li class="header__link"><a href="#">Dashboard</a></li>
-          <li class="header__link"><a href="#">Productos</a></li>
           <li class="header__link">
-            <a href="lista_cliente.html">Clientes </a>
+            <a href="./lista_productos.html">Productos</a>
           </li>
-          <li class="header__link"><a href="#">Pets</a></li>
+          <li class="header__link">
+            <a href="./lista_cliente.html">Clientes </a>
+          </li>
+          <li class="header__link">
+            <a href="./lista_mascota.html">Pets</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -72,5 +76,9 @@
         </form>
       </section>
     </main>
+    <script
+      type="module"
+      src="../controllers/actualizar_controller.js"
+    ></script>
   </body>
 </html>

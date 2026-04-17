@@ -1,6 +1,6 @@
 import { clientService } from "../service/client-service.js";
 
-const crearFila = (nombre, email) => {
+const crearFila = (nombre, email, id) => {
   const fila = document.createElement("tr"); //creamos una fila
   //html como variable
   const contenido = `
@@ -27,20 +27,27 @@ const crearFila = (nombre, email) => {
     </td>
   `;
   fila.innerHTML = contenido;
-  const btn = fila.querySelector("button").addEventListener("click", () => {
+  const btn = fila.querySelector("button");
+  btn.addEventListener("click", () => {
     const id = btn.id;
     clientService
       .eliminarCliente(id)
-      .then((respuesta) => alert("eliminado").window.location.reload())
+      .then((respuesta) => {
+        alert("eliminado");
+        window.location.reload();
+      })
       .catch((error) => alert("no se pudo eliminar"));
   });
   return fila;
 };
 
 const tabla = document.querySelector("[data-table]");
-clientService.listar_clientes().then((data) => {
-data.forEach(( { nombre, email, id }) => {
-    const nuevaFila=crearFila(nombre, email, id)
-    tabla.appendChild(nuevaFila)
-});
-}).catch((error) => alert("ERROR"));
+clientService
+  .listar_clientes()
+  .then((data) => {
+    data.forEach(({ nombre, email, id }) => {
+      const nuevaFila = crearFila(nombre, email, id);
+      tabla.appendChild(nuevaFila);
+    });
+  })
+  .catch((error) => alert("ERROR"));

@@ -1,0 +1,21 @@
+import { productService } from "../service/product-service.js";
+
+const formulario = document.querySelector("[data-form]");
+
+formulario.addEventListener("submit", (evento) => {
+  evento.preventDefault();
+
+  const nombre = document.querySelector("[data-nombre]").value;
+  const precio = document.querySelector("[data-precio]").value;
+  const descripcion = document.querySelector("[data-descripcion]").value;
+
+  productService
+    .crearProducto(nombre, precio, descripcion)
+    .then((respuesta) => {
+      console.log("Producto registrado", respuesta);
+      window.location.href = "../screens/registro_producto.html";
+    })
+    .catch((error) => {
+      console.log("Error producto", error);
+    });
+});

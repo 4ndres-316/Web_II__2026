@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Doguito Petshop | Registro de producto</title>
-    <link rel="icon" href="../assets/img/doguitoadm.svg" type="image/x-icon" />
+    <title>Doguito Petshop | Actualizar mascota</title>
+
+    <link rel="icon" href="../assets/img/doguitoadm.svg" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"
       rel="stylesheet"
@@ -13,21 +15,19 @@
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="../assets/css/base/base.css" />
     <link rel="stylesheet" href="../assets/css/componentes/header.css" />
     <link rel="stylesheet" href="../assets/css/componentes/card.css" />
     <link rel="stylesheet" href="../assets/css/register_client.css" />
     <link rel="stylesheet" href="../assets/css/componentes/inputs.css" />
     <link rel="stylesheet" href="../assets/css/componentes/button.css" />
-    <link rel="stylesheet" href="../assets/css/register_product.css" />
   </head>
+
   <body>
     <header class="header container">
-      <img
-        src="../assets/img/doguitoadm.svg"
-        alt="Logo Doguito"
-        class="header_logo"
-      />
+      <img src="../assets/img/doguitoadm.svg" class="header__logo" />
+
       <nav>
         <ul class="header__list-nav">
           <li class="header__link"><a href="#">Dashboard</a></li>
@@ -35,62 +35,48 @@
             <a href="./lista_productos.html">Productos</a>
           </li>
           <li class="header__link">
-            <a href="./lista_cliente.html">Clientes </a>
+            <a href="./lista_cliente.html">Clientes</a>
           </li>
           <li class="header__link"><a href="./lista_mascota.html">Pets</a></li>
         </ul>
       </nav>
     </header>
+
     <main class="container flex flex--center flex--column">
       <section class="card cadastro">
-        <h1 class="card__title">Registrar un producto</h1>
+        <h1 class="card__title">Editar mascota</h1>
+
         <form class="flex flex--column" data-form>
           <div class="input-container">
-            <input
-              name="nombre"
-              id="nombre"
-              class="input"
-              type="text"
-              placeholder="Nombre"
-              required
-              data-nombre
-            />
+            <input class="input" type="text" required data-nombre />
             <label class="input-label">Nombre</label>
           </div>
 
           <div class="input-container">
-            <input
-              name="precio"
-              id="precio"
-              class="input"
-              type="number"
-              placeholder="Precio"
-              required
-              data-precio
-            />
-            <label class="input-label">Precio</label>
+            <input class="input" type="number" required data-edad />
+            <label class="input-label">Edad</label>
           </div>
 
-          <div class="textarea-container">
-            <textarea
-              class="textarea"
-              name="descripcion"
-              id="descripcion"
-              placeholder="Descripcion"
-              required
-              data-descripcion
-            ></textarea>
-            <label class="textarea-label">Descripcion</label>
+          <div class="input-container">
+            <input class="input" type="text" required data-raza />
+            <label class="input-label">Raza</label>
           </div>
 
-          <button type="submit" class="button">Registrar producto</button>
+          <div class="input-container">
+            <input class="input" type="number" required data-peso />
+            <label class="input-label">Peso</label>
+          </div>
+
+          <div class="input-container">
+            <select class="input" data-dueno required></select>
+            <label class="input-label">Dueño</label>
+          </div>
+
+          <button type="submit" class="button">Editar mascota</button>
         </form>
-
-        <script
-          type="module"
-          src="../controllers/registrar_producto.js"
-        ></script>
       </section>
     </main>
+
+    <script type="module" src="../controllers/actualizar_mascota.js"></script>
   </body>
 </html>

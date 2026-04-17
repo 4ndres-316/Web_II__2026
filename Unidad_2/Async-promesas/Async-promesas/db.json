@@ -1,9 +1,46 @@
 {
   "perfil": [
     {
-      "nombre": "FULANITO",
-      "email": "fulanito@univalle.com",
-      "id": "1"
+      "nombre": "Ramiro Fernandez",
+      "email": "carmenvuelve@univalle.com",
+      "id": "s0blN5d0s2M"
+    },
+    {
+      "nombre": "Andrés Melgarejo",
+      "email": "andresmelna33@gmail.com",
+      "id": "cln7kHiqgX8"
+    }
+  ],
+  "productos": [
+    {
+      "nombre": "Pelotas",
+      "precio": "1500",
+      "descripcion": "Pelotas super rebotonas",
+      "id": "-S_QH9WSWeo"
+    },
+    {
+      "nombre": "Croquetas",
+      "precio": "150",
+      "descripcion": "Croquetas nutritivas",
+      "id": "yfPEMCfFOsU"
+    }
+  ],
+  "pets": [
+    {
+      "id": "7-ksMP9hpjk",
+      "nombre": "Larry",
+      "edad": "3",
+      "raza": "Pequines",
+      "peso": "20",
+      "idDueño": "cln7kHiqgX8"
+    },
+    {
+      "id": "10JvlLObAWk",
+      "nombre": "Cacho",
+      "edad": "7",
+      "raza": "Cocker",
+      "peso": "20",
+      "idDueño": "s0blN5d0s2M"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

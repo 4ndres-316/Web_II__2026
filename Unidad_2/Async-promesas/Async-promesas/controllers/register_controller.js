@@ -9,7 +9,9 @@ formulario.addEventListener("submit", (evento) => {
     .crearCliente(nombre, email)
     .then((respuesta) => {
       console.log("Todo GOD", respuesta);
-      window.location.href = "/screens/registro_completado.html";
+      window.location.href = "../screens/registro_completado.html";
     })
-    .catch((error) => console.log("Nada GOD", error));
+    .catch((error) => {
+      console.log("Nada GOD", error);
+    });
 });
