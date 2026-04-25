@@ -7,12 +7,14 @@ const crearFila = async (nombre, edad, raza, peso, idDueño, id) => {
   let nombreDueno = "Desconocido";
 
   try {
-    const cliente = await clientService.cliente(idDueño);
-
-    if (cliente && cliente.nombre) {
-      nombreDueno = cliente.nombre;
+    if (typeof idDueño === "string" && idDueño.includes(" ")) {
+      nombreDueno = idDueño;
+    } else {
+      const cliente = await clientService.cliente(idDueño);
+      if (cliente && cliente.nombre) {
+        nombreDueno = cliente.nombre;
+      }
     }
-
   } catch (error) {
     console.log("Error cargando dueño", error);
   }
@@ -65,7 +67,7 @@ petsService
         pet.raza,
         pet.peso,
         pet.idDueño,
-        pet.id
+        pet.id,
       );
       tabla.appendChild(fila);
     }
