@@ -95,7 +95,7 @@ const cliente = (id) => {
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-MYSQL=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
-const API_BASE_URL = "http://localhost/API/conexion.php";
+/*const API_BASE_URL = "http://localhost/API/conexion.php";
 
 const listar_clientes = () => {
   return fetch(`${API_BASE_URL}`).then((respuesta) => {
@@ -141,7 +141,7 @@ const cliente = (id) => {
   return fetch(`${API_BASE_URL}?id=${id}`).then((respuesta) =>
     respuesta.json(),
   );
-};
+};*/
 
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-SUPABASE-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -210,10 +210,59 @@ const eliminarCliente = (id) => {
   );
 };*/
 
-export const clientService = {
+/*export const clientService = {
   listar_clientes,
   crearCliente,
   actualizarCliente,
   eliminarCliente,
   cliente,
+};*/
+
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-Express-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+const BASE_URL = "http://localhost:3000";
+const clientService = {
+  //get
+  listar_clientes: async () => {
+    const res = await fetch(`${BASE_URL}/clientes`);
+    return res.json();
+  },
+
+  //get por id
+  cliente: async (id) => {
+    const res = await fetch(`${BASE_URL}/clientes/${id}`);
+    return res.json();
+  },
+
+  //post
+  crearCliente: async (nombre, email) => {
+    const res = await fetch(`${BASE_URL}/clientes`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ nombre, email }),
+    });
+    return res.json();
+  },
+
+  //put
+  actualizarCliente: async (nombre, email, id) => {
+    const res = await fetch(`${BASE_URL}/clientes/${id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ nombre, email }),
+    });
+    return res.json();
+  },
+
+  //delete
+  eliminarCliente: async (id) => {
+    const res = await fetch(`${BASE_URL}/clientes/${id}`, {
+      method: "DELETE",
+    });
+    return res.json();
+  },
 };
+export { clientService };

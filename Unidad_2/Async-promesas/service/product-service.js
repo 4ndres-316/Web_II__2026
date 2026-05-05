@@ -151,10 +151,57 @@ const eliminarProducto = (id) =>
     (data) => data?.[0] ?? Promise.reject(new Error("No se pudo eliminar")),
   );*/
 
-export const productService = {
+/*export const productService = {
   listarProductos,
   crearProducto,
   actualizarProducto,
   eliminarProducto,
   producto,
+};*/
+
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-Express-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+const BASE_URL = "http://localhost:3000";
+const productService = {
+  // get
+  listarProductos: async () => {
+    const res = await fetch(`${BASE_URL}/productos`);
+    return res.json();
+  },
+
+  // get por id
+  producto: async (id) => {
+    const res = await fetch(`${BASE_URL}/productos/${id}`);
+    return res.json();
+  },
+
+  // post
+  crearProducto: async (nombre, precio, descripcion) => {
+    const res = await fetch(`${BASE_URL}/productos`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ nombre, precio, descripcion }),
+    });
+    return res.json();
+  },
+
+  // put
+  actualizarProducto: async (nombre, precio, descripcion, id) => {
+    const res = await fetch(`${BASE_URL}/productos/${id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ nombre, precio, descripcion }),
+    });
+    return res.json();
+  },
+
+  // delete
+  eliminarProducto: async (id) => {
+    const res = await fetch(`${BASE_URL}/productos/${id}`, {
+      method: "DELETE",
+    });
+    return res.json();
+  },
 };
+export { productService };

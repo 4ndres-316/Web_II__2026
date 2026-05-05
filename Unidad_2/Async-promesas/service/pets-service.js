@@ -158,10 +158,57 @@ const eliminarPet = (id) =>
     (data) => data?.[0] ?? Promise.reject(new Error("No se pudo eliminar")),
   );*/
 
-export const petsService = {
+/*export const petsService = {
   listarPets,
   crearPet,
   actualizarPet,
   eliminarPet,
   pet,
+};*/
+
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-Express-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+const BASE_URL = "http://localhost:3000";
+const petsService = {
+  // get
+  listarPets: async () => {
+    const res = await fetch(`${BASE_URL}/pets`);
+    return res.json();
+  },
+
+  // get por id
+  pet: async (id) => {
+    const res = await fetch(`${BASE_URL}/pets/${id}`);
+    return res.json();
+  },
+
+  // post
+  crearPet: async (nombre, edad, raza, peso, idDueño) => {
+    const res = await fetch(`${BASE_URL}/pets`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ nombre, edad, raza, peso, idDueño }),
+    });
+    return res.json();
+  },
+
+  // put
+  actualizarPet: async (nombre, edad, raza, peso, idDueño, id) => {
+    const res = await fetch(`${BASE_URL}/pets/${id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ nombre, edad, raza, peso, idDueño }),
+    });
+    return res.json();
+  },
+
+  // delete
+  eliminarPet: async (id) => {
+    const res = await fetch(`${BASE_URL}/pets/${id}`, {
+      method: "DELETE",
+    });
+    return res.json();
+  },
 };
+export { petsService };
